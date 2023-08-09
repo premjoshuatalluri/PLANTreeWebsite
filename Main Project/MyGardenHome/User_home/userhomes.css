@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/*-----menu-bar---------------------*/
+.left-menu {
+  position: fixed;
+  top: 0;
+  left: -150px; /* Start offscreen */
+  width: 150px;
+  height: 100vh;
+  background-color: #e0e0e0;
+  color: #fff;
+  padding-top: 20px;
+  transition: left 0.3s ease; /* Add a smooth transition effect */
+}
+
+.left-menu.show-menu {
+  left: 0; /* Show the menu when the class "show-menu" is added */
+}
+
+.left-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.left-menu li {
+  padding: 20px 10px;
+  text-align: center;
+  transition: box-shadow 0.4s,background-color 0.4s,border-radius 0.4s;
+}
+.left-menu li:hover{
+  box-shadow:inset 6px 6px 10px 0 rgba(0,0,0,0.2),inset -6px -6px 10px 0 rgba(255,255,255.5);
+  background-color: #e0e0e0;
+  border-radius: 00px;
+}
+.left-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  transition: margin-right 0.4s;
+}
+
+.left-menu a:hover {
+  margin-right: 3px;
+}
+.close-sign {
+  position: absolute;
+  top: 20px;
+  right: 10%;
+  color: #333;
+  padding: 2px 7px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.close-sign:active{
+  margin-top:1px;
+  margin-right: 2px;
+}
+/*-------------page header--------------------------------*/
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0px;
+  cursor: pointer;
+  background-color: transparent; 
+}
+
+.menu-bar {
+  height: 30px; 
+  width: auto;
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+
+.plantree_logo {
+  height: 60px;
+  width: auto;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  padding: 20px 35px;
+  margin-left: 0px;
+  transition: margin-left 0.3s ease;
+}
+.container.show-menu {
+  margin-left: 150px; /* Move the container to the right when the menu is open */
+}
+.greeting {
+  font-size: 36px;
+  font-family: Roboto, Arial, sans-serif; 
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+
+}
+.greeting em {
+  font-family: PT Serif;
+  color: #333;
+  font-weight: 400;
+}
+.garden-header{
+  font-family: Roboto;
+  padding: 40px 0px 0px 0px;
+  font-weight: 400;
+  font-size: 28px;
+  color: #333;
+}
+.button-container {
+  display: flex;
+  padding: 20px 0px;
+  align-items: center;
+}
+
+.add-button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  background-image: url(ICONS/plus.png);
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.add-button:active{
+  margin-top:4px;
+  margin-right: 8px;
+}
+/* Style for the newly added garden buttons */
+.garden-button {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+  width: 190px;
+  background-color: #cbbad2;
+  color: rgb(54, 52, 52);
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  text-align: left;
+  background-image: url(ICONS/gardening\ copy.png);
+  background-size: 80px;
+  background-position:right 25px top 50%;
+  background-repeat: no-repeat;
+  transition: background-image 0.15s;
+}
+
+/* Hover effect for the garden buttons - changing background image */
+.garden-button:hover {
+  background-image: url('ICONS/gardening.png');
+}
+/*----------------------Footer----------------------------*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9; 
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer h4 {
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer p {
+  color: #777;
+}
+
+.icons .fa {
+  color: #7B4893;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}

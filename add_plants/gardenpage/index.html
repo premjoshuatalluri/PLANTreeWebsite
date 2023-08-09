@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant View</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+      <div class="left-section">
+        <img src="previous.png" alt="Previous">
+      </div>
+      <div class="right-section">
+        <img src="plantree_logo.png" alt="Plantree Logo">
+      </div>
+    </div>
+
+    <div class="intro">
+      <h1 class="h1tag3">Garden 1</h1>
+      <h1 class="h1tag4">Garden Layout</h1>
+    </div>
+    <div class="box-container">
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+    </div>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const username = urlParams.get('username') || "Guest";
+      const garden_id = urlParams.get('garden_id') || "DefaultUserId"; 
+      const gardenName = urlParams.get('garden_name') || "My Garden";
+      const h1Tag3Element = document.querySelector(".h1tag3");
+
+      h1Tag3Element.innerHTML = `${gardenName}`;
+      window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username') || "Guest";
+        const garden_id = urlParams.get('garden_id') || "DefaultUserId";
+          fetch(`/add_plants/gardenpage/get_user_plants.php?username=${username}&garden_id=${garden_id}`)
+  .then(response => response.json())
+  .then(data => {
+    const boxContainerElements = document.querySelectorAll('.box');
+    data.forEach((plant, index) => {
+      const boxElement = boxContainerElements[plant.box_index];
+      if (boxElement) {
+        const imageUrl = plant.image_url ? `url('${plant.image_url}')` : "url('nature (1).png')";
+        boxElement.style.backgroundImage = imageUrl;
+        boxElement.innerHTML = `<span>${plant.common_name}</span>`;
+      }
+    });
+  })
+  .catch(error => {
+    console.error('There was an error fetching the user plants:', error);
+  });
+          const leftSectionElements = document.querySelectorAll('.left-section');
+          leftSectionElements.forEach(element => {
+            element.addEventListener('click', function() {
+              window.location.href = `/User_home/userhome.html?username=${username}`;
+            });
+          });
+          const boxContainerElements = document.querySelectorAll('.box');
+          boxContainerElements.forEach(element => {
+            element.addEventListener('click', function() {
+              if (!element.textContent.trim()) { // Check if the text content is null or empty
+                window.location.href = `/add_plants/index.html?username=${username}&garden_name=${gardenName}&garden_id=${garden_id}`;
+              }
+            });
+          });
+          };
+    </script>    
+</body>
+</html>

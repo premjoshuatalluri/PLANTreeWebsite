@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+      <div class="left-section">
+        <img src="previous.png" alt="Previous">
+      </div>
+      <div class="right-section">
+        <img src="plantree_logo.png" alt="Plantree Logo">
+      </div>
+    </div>
+  
+    <div class="intro">
+      <h1 class="h1tag3">Garden 1</h1>
+      <h1 class="h1tag4">Add a Plant</h1>
+    </div>
+    <div class="box-container">
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+        <div class="box" style="background-image: url('location.png');"></div>
+    </div>
+    <div class="container">
+        <h1 class="h1tag1">Choose the</h1>
+        <h1 class="h1tag2">Plant You Like</h1>
+        <input type="text" id="search" placeholder="Search for a Plant...">
+        <button onclick="searchPlant()"><img src="loupe.png" class="image"></button>
+        <div id="content"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

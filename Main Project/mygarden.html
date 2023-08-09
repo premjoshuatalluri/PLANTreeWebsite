@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Garden Planner</title>
+    <link rel="stylesheet" href="mygardens.css">
+</head>
+<body>
+  <div class="garden-layout" id="gardenLayout" onclick="navigateToSearchBox(event)">
+    <div class="selected-space"></div>
+    <div class="selected-space">x</div>
+    <div class="selected-space">Y</div>
+  </div>
+  <div class="search-box" id="searchBox">
+    <input type="text" placeholder="Search for a plant..." oninput="searchPlant()">
+    <button onclick="searchPlant()">Search</button>
+    <div id="plantList">
+        <!-- Plant list items will be added here -->
+    </div>
+  </div>
+  <div id="plantNamesDisplay"></div>
+  <script src="mygardenjs.js"></script>
+</body>
+</html>
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+</head>
+<body>
+    <div id="weatherInfo"></div>
+    <script src="weather.js"></script>
+</body>
+</html>
+JAVASCRIPT
+// weather.js
+const apiKey = 'YOUR_WEATHER_API_KEY'; // Replace this with your actual API key
+const apiUrl = 'https://api.weatherapi.com/v1/current.json';
+
+function getWeather(city) {
+    const url = `${apiUrl}?key=${apiKey}&q=${city}`;
+
+    // Fetch the data from the API
+    fetch(url)
+        .then(res
+-->

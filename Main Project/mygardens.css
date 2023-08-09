@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.garden-layout {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 840px;
+  height: 200px;
+  border: 1px solid #000;
+  margin: 20px;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.search-box {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#plantList {
+  margin-top: 10px;
+}
+
+.plant-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.plant-item img {
+  width: 80px; /* Increased image size */
+  height: 80px; /* Increased image size */
+  margin-right: 10px;
+}
+
+.plant-details {
+  flex: 1;
+}
+
+.plant-details h3 {
+  margin: 0;
+}
+
+.plant-details .buttons {
+  display: flex;
+  align-items: center;
+}
+
+.plant-details .buttons button {
+  margin-right: 5px;
+}
+
+.selected-space {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: red;
+  font-weight: bold;
+  padding: 2px 6px; /* Add left and right padding to the 'x' */
+}
+
+.quantity-box {
+  width: 50px;
+  padding: 5px;
+}
+
+.add-button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

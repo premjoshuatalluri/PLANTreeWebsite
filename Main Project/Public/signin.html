@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2>Sign In</h2>
+        <form id="signinForm">
+          <div class="form-group">
+            <label for="signinEmail">Email address</label>
+            <input type="email" class="form-control" id="signinEmail" placeholder="Enter email" required>
+          </div>
+          <div class="form-group">
+            <label for="signinPassword">Password</label>
+            <input type="password" class="form-control" id="signinPassword" placeholder="Password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Your custom JavaScript code for handling form submission and AJAX can go here -->
+  <script>
+    // Example: AJAX code to handle form submission for sign-in
+    $("#signinForm").submit(function (event) {
+      event.preventDefault();
+      const email = $("#signinEmail").val();
+      const password = $("#signinPassword").val();
+
+      // Implement AJAX request to submit the sign-in data to the server
+      // You'll need a server-side endpoint to handle the sign-in logic and verify credentials
+      // The server will query the database to check if the user exists and the password is correct
+      // After the server processes the request, it will return a response (success or error message).
+
+      // Example AJAX request (replace this with your server-side implementation)
+      $.post("/signin", { email: email, password: password }, function (response) {
+        alert(response); // Show response from the server (e.g., "Sign in successful" or "Invalid credentials")
+      });
+    });
+  </script>
+</body>
+
+</html>

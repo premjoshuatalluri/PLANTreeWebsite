@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanTree</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+      <section class="header">
+        <nav>
+          <a href="home.html"><img src="Images/plantree_logo.png" title="PlanTree" class="logo"></a> 
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="../Veg/Plants_page/plant_home.html">Plants</a></li>
+              <li><a href="">Pests</a></li>
+              <li><a href="">Personalize</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+          <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+          <h1>Personalize Your <i style="color: #c3c3e9; font-family: PT Serif; font-weight: bold;">Own</i> Garden</h1>
+          <p>Start your journey here</p>
+          <a href="http://localhost/login_system/index.php" class="joinhere">Let's Go</a>
+        </div>
+    </section>
+<!----------------Vision-Mission------------------->
+    <section class="sub-header">
+      <div class="vision-mission">
+        <h2 class="vision">Plan Your Garden Right Away</h2> 
+        <div class="vertical-line"></div>
+        <p class="mission">Discover the secrets to a thriving home garden! Unveil expert tips, raised beds, and perfect timing for cultivating a bountiful vegetable paradise. Join us now!</p>
+      </div>
+    </section>
+<!-----------------discover tabs------------------>
+    <section class="Discover-tabs">
+      <h1>Discover more</h1>
+      <p class="discovery-p">Select from a Variety of Our Unique Features...</p>
+      <div class="container">
+        <div class="tab">
+          <a href="../Veg/Plants_page/plant_home.html" style="text-decoration: none; color: inherit;">
+            <h3>Plants</h3>
+            <p class="tab-p">
+              Dive into the World of 1000+ Plant Information
+            </p>
+          </a>
+        </div>        
+        <div class="tab">
+          <h3>
+          Grow
+          </h3>
+          <p class="tab-p">
+            Embark on Your Gardening Journey with Personalization
+          </p>
+        </div>
+        <div class="tab">
+          <h3>
+            Pests
+          </h3>
+          <p class="tab-p">
+            Explore Pest Insights for Effective Plant Protection
+           </p>
+        </div>
+      </div>
+    </section>
+<!-----------------Call to action----------------------->
+<section class="cta">
+  <h2>
+    Reach Out to us for Gardening-related inquiries <br> Anywhere from the world
+  </h2>
+  <a href="" class="joinhere">CONTACT US</a>
+</section>
+
+<!------------------------Footer------------------->
+<section class="footer">
+  <h4>About Us</h4>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum delectus tenetur minima maiores 
+    nostrum blanditiis <br>harum ratione doloribus officia? Quos in architecto ratione eligendi perspiciatis quibusdam, explicabo repellendus doloremque!</p>
+  <div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+  </div>
+</section>
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function showMenu(){
+    navLinks.style.right ="0";
+  }
+  function hideMenu(){
+    navLinks.style.right ="-200px";
+  }
+</script>
+  </body>
+</html>
