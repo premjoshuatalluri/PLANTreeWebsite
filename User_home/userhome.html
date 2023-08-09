@@ -61,7 +61,6 @@
   const newButton = document.createElement("button");
   newButton.textContent = `Garden ${gardenCount}`;
 
-  // AJAX request to add garden
   fetch('add_garden.php', {
     method: 'POST',
     headers: {
@@ -91,17 +90,16 @@ window.onload = function() {
   fetch(`get_gardens.php?username=${username}`)
     .then(response => response.json())
     .then(gardens => {
-      gardens.forEach(gardenName => {
-      const newButton = document.createElement("button");
-      newButton.textContent = gardenName;
-      newButton.classList.add("garden-button");
-      newButton.onclick = function () {
-        window.location.href = `/add_plants/gardenpage/index.html?username=${username}&garden_name=${newButton.textContent}`;
-      };
-      const addButton = document.getElementById("addButton");
-      addButton.parentNode.insertBefore(newButton, addButton);
-    });
-
+      gardens.forEach(garden => {
+        const newButton = document.createElement("button");
+        newButton.textContent = garden.garden_name;
+        newButton.classList.add("garden-button");
+        newButton.onclick = function () {
+          window.location.href = `/add_plants/gardenpage/index.html?username=${username}&garden_name=${newButton.textContent}&garden_id=${garden.garden_id}`;
+        };
+        const addButton = document.getElementById("addButton");
+        addButton.parentNode.insertBefore(newButton, addButton);
+      });
     });
 };
 
